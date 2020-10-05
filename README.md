@@ -4,6 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 # Technologies used
 - Angular CLI 10.1.4
 - Angular 10.1.4
+- TypeScript 4.0.2
 - Node.js 12.18.4
 - npm 6.14.8
 
@@ -16,7 +17,26 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Run the command `npm install @angular/cli` from the command prompt to install latest angular cli version.
 - Open the local folder to which the repository has been cloned and run command prompt from that location. Then run the below commands.
 - Run `npm install` command to install all the required dependencies for this app.
-- Run `ng test` to execute the unit tests.
+- Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    #### Units to be tested
+    1. Category List Page
+        * should create.
+        * should display products.
+        * add a duplicate item should increment the quantity for that item.
+        * should navigate to product details page
+    2. Product Detail Page
+        * should create.
+        * Add first item to the cart.
+        * When quantity is null.
+        * Add duplicate item.
+    3. Shopping Cart Page
+        * should create.
+        * change quantity of first product.
+        * change quantity of second product.
+        * remove item.
+    4. Product Service
+        * should create.
+        * should return data.
 - Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 # Reasons for choosing Angular for this single page application

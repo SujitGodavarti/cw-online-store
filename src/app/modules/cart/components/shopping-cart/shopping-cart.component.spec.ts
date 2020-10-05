@@ -42,14 +42,14 @@ describe('ShoppingCartComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('change quantity.', () => {
+  it('change quantity of first product.', () => {
     component.cartList = [{product:products[0],quantity:1},{product:products[1],quantity:2}];
     component.changeQuantity(component.cartList[0],2);
     expect(component.cartList).toEqual([{product:products[0],quantity:2},{product:products[1],quantity:2}]);
     expect(component.totalPrice).toEqual(136);
   });
 
-  it('change quantity.', () => {
+  it('change quantity of second product.', () => {
     component.cartList = [{product:products[0],quantity:5},{product:products[1],quantity:2}];
     component.changeQuantity(component.cartList[1],1);
     expect(component.cartList).toEqual([{product:products[0],quantity:5},{product:products[1],quantity:1}]);
