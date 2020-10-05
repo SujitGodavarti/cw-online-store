@@ -1,0 +1,21 @@
+<div class="header-image">
+    <div class="header-block">
+        <div class="header-text">
+            <div class="header-text-title">Plates</div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mollis sem. Etiam id luctus libero.
+                Vivamus vulputate urna eget velit iaculis, et interdum elit pellentesque. Duis porta nunc neque, nec volutpat erat lacinia a.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="layout-container">
+    <div class="product-grid">
+        <div class="col-md-4 col-sm-6 product-layout" *ngFor="let product of products$ | async; let i = index">
+            <category-item [product]="product"
+                           (onViewDetails)="viewDetails(i)"
+                           (onAddToCart)="addToCart(product)">
+            </category-item>
+        </div>
+    </div>
+</div>
